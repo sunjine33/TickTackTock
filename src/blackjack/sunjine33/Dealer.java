@@ -3,7 +3,6 @@ package blackjack.sunjine33;
 public class Dealer {
 
 	Deck d = new Deck();
-	Card c = new Card();
 
 	private String randomCard(int i) {
 
@@ -11,16 +10,16 @@ public class Dealer {
 		
 		switch (i) {
 		case 1:
-			result = "H" + c.Hcard();
+			result = (d.Hcard() == 11) ? "(H)J" : (d.Hcard() == 12) ? "(H)Q" : (d.Hcard() == 13) ? "(H)K" : "(H)"+d.Hcard();
 			break;
 		case 2:
-			result = "S" + c.Scard();
+			result = "S" + d.Scard();
 			break;
 		case 3:
-			result = "C" + c.Ccard();
+			result = "C" + d.Ccard();
 			break;
 		case 4:
-			result = "D" + c.Dcard();
+			result = "D" + d.Dcard();
 			break;
 		}
 		return result;
