@@ -3,7 +3,7 @@ package blackjack.sunjine33;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class User implements Util{
+public class User extends Player implements Util{
 	Scanner sc = new Scanner(System.in);
 	
 	ArrayList<String> mycard = new ArrayList<>(5);
