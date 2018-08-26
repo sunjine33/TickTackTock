@@ -21,16 +21,16 @@ public class Board extends TickTackTock {
 	}
 
 	public static void viewBoard() {
-		System.out.println("º¸µåÇöÈ²");
+		System.out.println("ë³´ë“œ ìŠ¤ìº”");
 		System.out.print("_________");
 		for (int i = 0; i < boardSize; i++) {
 			if (i % 3 == 0) {
 				System.out.println();
 			}
-			System.out.print("¦¢" + board[i] + "¦¢");
+			System.out.print("â”‚" + board[i] + "â”‚");
 		}
 		System.out.println();
-		System.out.print("£ş£ş£ş£ş£ş£ş£ş\n");
+		System.out.print("â”â”â”â”â”â”â”\n");
 	}
 
 	public boolean playerPutStone() {
@@ -38,7 +38,7 @@ public class Board extends TickTackTock {
 			player = sc.next();
 			int n = Integer.parseInt(player);
 			if (board[n - 1].equals("O") || board[n - 1].equals("X")) {
-				System.out.println("´Ù½Ã µÎ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”.");
 				continue;
 			} else if (!board[n - 1].equals("O") || !board[n - 1].equals("X")) {
 				board[n - 1] = "O";
@@ -60,7 +60,7 @@ public class Board extends TickTackTock {
 			player = sc.next();
 			int n = Integer.parseInt(player);
 			if (board[n - 1].equals("O") || board[n - 1].equals("X")) {
-				System.out.println("´Ù½Ã µÎ¼¼¿ä.");
+				System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”.");
 				continue;
 			}
 
@@ -145,9 +145,9 @@ public class Board extends TickTackTock {
 
 	public void win(String win) {
 		if (win.equals("player win")) {
-			System.out.println("PLAYERÀÇ ½Â¸®!!!");
+			System.out.println("PLAYERì˜ ìŠ¹ë¦¬!!!");
 		} else if (win.equals("com win")) {
-			System.out.println("PLAYER2ÀÇ ½Â¸®!!!");
+			System.out.println("PLAYER2ì˜ ìŠ¹ë¦¬!!!");
 		}
 	}
 

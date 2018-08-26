@@ -25,7 +25,7 @@ public class TickTackTock {
 
 	private static void playGame() {
 		if (count == 0) {
-			System.out.println("°ÔÀÓÀ» ½ÃÀÛÇÕ´Ï±î? Y/n");
+			System.out.println("ê²Œì„ì„ ì‹œì‘í•©ë‹ˆê¹Œ? Y/n");
 			String request = sc.next();
 			if(request.equals("Y")){
 			while (true) {
@@ -41,7 +41,7 @@ public class TickTackTock {
 			}
 			}
 		}else if(count != 0) {
-			System.out.println("°ÔÀÓÀ» Àç½ÃÀÛÇÕ´Ï±î??? Y/n");
+			System.out.println("ë¦¬í”Œë ˆì´??? Y/n");
 			String request = sc.next();
 			if(request.equals("Y")) {
 				whoWin = null;
@@ -70,25 +70,25 @@ public class TickTackTock {
 		switch (playerP() - comP()) {
 		case -2:
 		case 1:
-			whoWin = "user ¼±Á¦°ø°İ";
+			whoWin = "user ì„ ê³µ";
 			a = 1;
 			break;
 		case -1:
 		case 2:
-			whoWin = "com ¼±Á¦°ø°İ";
+			whoWin = "com ì„ ê³µ";
 			a = 1;
 			break;
 		case 0:
-			whoWin = "¹«½ÂºÎ";
+			whoWin = "ë¬´ìŠ¹ë¶€";
 			break;
 		}
 		return a;
 	}
 
 	private static void Play(String first_second) {
-		if (whoWin.equals("user ¼±Á¦°ø°İ")) {
+		if (whoWin.equals("user ì„ ê³µ")) {
 			userFirst();
-		} else if (whoWin.equals("com ¼±Á¦°ø°İ")) {
+		} else if (whoWin.equals("com ì„ ê³µ")) {
 			comFirst();
 		}
 
@@ -96,16 +96,16 @@ public class TickTackTock {
 
 	public static int playerP() {
 		int players = 0;
-		System.out.println("°¡À§¹ÙÀ§º¸");
+		System.out.println("ê°€ìœ„ ë°”ìœ„ ë³´!!!");
 		String player = sc.next();
-		if (player.equals("°¡À§")) {
+		if (player.equals("ê°€ìœ„")) {
 			players = 1;
-		} else if (player.equals("¹ÙÀ§")) {
+		} else if (player.equals("ë°”ìœ„")) {
 			players = 2;
-		} else if (player.equals("º¸")) {
+		} else if (player.equals("ë³´")) {
 			players = 3;
 		} else
-			System.out.println("´Ù½Ã ³»¼¼¿ä");
+			System.out.println("ë‹¤ì‹œ ì„ íƒí•˜ì„¸ìš”");
 		return players;
 	}
 
@@ -113,11 +113,11 @@ public class TickTackTock {
 		int com = (int) (Math.random() * 3) + 1;
 
 		if (com == 1) {
-			System.out.println("Com: °¡À§");
+			System.out.println("Com: ê°€ìœ„");
 		} else if (com == 2) {
-			System.out.println("Com: ¹ÙÀ§");
+			System.out.println("Com: ë°”ìœ„");
 		} else if (com == 3) {
-			System.out.println("Com: º¸");
+			System.out.println("Com: ë³´");
 		}
 		return com;
 	}
@@ -126,14 +126,14 @@ public class TickTackTock {
 		System.out.println(whoWin + "\t");
 		while (true) {
 			
-			System.out.println("User Turn ¾îµğ¿¡ µÎ½Ê´Ï±î?");
+			System.out.println("User Turn ì–´ë””ì— ë‘¡ë‹ˆê¹Œ??");
 			flag = b.playerPutStone();
 			if(flag == false) {
 				b.win("player win");
 				break;
 			}
 			System.out.println();
-			System.out.println("Com turn ¾îµğ¿¡ µÎ½Ê´Ï±î??");
+			System.out.println("Com turn ì–´ë””ì— ë‘¡ë‹ˆê¹Œ??");
 			flag = b.comPutStone();
 			if(flag == false) {
 				b.win("com win");
@@ -146,7 +146,7 @@ public class TickTackTock {
 		System.out.println(whoWin + "\t");
 		
 		while (true) {			
-			System.out.println("Com turn ¾îµğ¿¡ µÎ½Ê´Ï±î??");
+			System.out.println("Com turn ì–´ë””ì— ë‘¡ë‹ˆê¹Œ??");
 			
 			flag = b.comPutStone();
 			if(flag == false) {
@@ -154,7 +154,7 @@ public class TickTackTock {
 				break;
 			}
 			System.out.println();
-			System.out.println("User Turn ¾îµğ¿¡ µÎ½Ê´Ï±î?");
+			System.out.println("User Turn ì–´ë””ì— ë‘¡ë‹ˆê¹Œ??");
 
 			flag = b.playerPutStone();
 			if(flag == false) {
